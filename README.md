@@ -10,6 +10,8 @@ JSONify can be included in your webpage as follows:
 ```
 It provides single method `jsonify()` which can be called on any valid form element, and returns JSON string representing form fields. Note that form fields must have `name` attribute in order to be included in JSON string.
 
+Additionally, you can provide `stringify` parameter to method to specify whether to get JSON string or JSON object, using `jsonify({ stringify:true })` (default is `false`).
+
 ## Example
 
 Include in your webpage as:
@@ -42,6 +44,11 @@ Returned JSON string:
 ## Issues
 
 The plugin may not be perfect, so feel free to submit any issue OR helping to fix an issue.
+
+##Version Information
+* 0.1 - First Release.
+* 0.2 - Option can be provided whether to create JSON string or JSON object.
+
 
 ## Author
 

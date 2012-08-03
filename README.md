@@ -4,39 +4,39 @@ JSONify is a minimal (only 257 bytes!) HTML-form to JSON converting plugin for j
 
 ## Usage
 
-JSONify can be included in your web project as follows:
-
-    <script type="text/javascript" src="js/jsonify.js"></script>
-
-It provides single method `jsonify()` which can be called on any valid form element, and returns JSON string representing form fields.
+JSONify can be included in your webpage as follows:
+```javascript
+<script type="text/javascript" src="js/jsonify.js"></script>
+```
+It provides single method `jsonify()` which can be called on any valid form element, and returns JSON string representing form fields. Note that form fields must have `name` attribute in order to be included in JSON string.
 
 ## Example
 
 Include in your webpage as:
 ```javascript
-    <script type="text/javascript" src="js/jsonify.js"></script>
+<script type="text/javascript" src="js/jsonify.js"></script>
 ```
 
 Your form in page:
 ```html
-    <form id="myform">
-    	<label>Name:</label>
-    	<input type="text" name="name"/>
-    	<label>Email</label>
-    	<input type="text" name="email"/>
-    	<label>Password</label>
-    	<input type="password" name="password"/>
-    </form>
+<form id="myform">
+	<label>Name:</label>
+	<input type="text" name="name"/>
+	<label>Email</label>
+	<input type="text" name="email"/>
+	<label>Password</label>
+	<input type="password" name="password"/>
+</form>
 ```
 
 Calling `jsonify()`:
 ```javascript
-    $("#myform").jsonify();
+$("#myform").jsonify();
 ```
 
 Returned JSON string:
 ```json
-    {"name":"Kushal","email":"catchmeifyoucan@gmail.com","password":"awesome"}
+{"name":"Kushal","email":"catchmeifyoucan@gmail.com","password":"awesome"}
 ```
 
 ## Issues

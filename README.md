@@ -1,6 +1,6 @@
 # JSONify
 
-JSONify is a minimal (only 257 bytes!) HTML-form to JSON converting plugin for jQuery. It creates JSON string from the name-and-value pair of form fields.
+JSONify is a minimal (only 323 bytes!) HTML-form to JSON converting plugin for jQuery. It creates JSON string from the name-and-value pair of form fields.
 
 ## Usage
 

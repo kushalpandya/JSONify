@@ -12,7 +12,7 @@ $.fn.jsonify = function(options) {
         } else
             json[this.name] = this.value || '';
     });
-    if(settings.stringify == true)
+    if(settings.stringify)
         return JSON.stringify(json);
     else
         return json;

@@ -1,1 +1,0 @@
-(function(a){a.fn.jsonify=function(b){var c=a.extend({stringify:false},b);var d={};a.each(this.serializeArray(),function(){if(d[this.name]){if(!d[this.name].push)d[this.name]=[d[this.name]];d[this.name].push(this.value||"")}else d[this.name]=this.value||""});if(c.stringify)return JSON.stringify(d);else return d}})(jQuery)

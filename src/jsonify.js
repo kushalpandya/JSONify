@@ -21,9 +21,21 @@
     $.fn.dejsonify = function(data) {
         if (typeof data === 'string')
             data = JSON.parse(data);
-        
+
         $.each(this.find('*[name]'), function() {
-            $(this).val(data[$(this).attr('name')]);
+            var inputType = $(this).attr('type'),
+                dataValue = data[$(this).attr('name')];
+
+            if (inputType === 'radio' ||
+                inputType === 'checkbox')
+            {
+                if ($.isArray(dataValue))
+                    $(this).prop('checked', $.inArray($(this).val(), dataValue) > -1);
+                else
+                    $(this).prop('checked', ($(this).val() === dataValue));
+            }
+            else
+                $(this).val(dataValue);
         });
     };
 })(jQuery);

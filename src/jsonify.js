@@ -5,7 +5,7 @@
         }, options);
         var json = {};
         $.each(this.serializeArray(), function() {
-            if (json[this.name]) {
+            if (this.name in json) {
                 if (!json[this.name].push)
                     json[this.name] = [json[this.name]];
                 json[this.name].push(this.value || '');

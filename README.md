@@ -2,7 +2,7 @@
 
 JSONify is a minimal (less than a KB!) HTML-form to JSON to HTML-form converting plugin for jQuery. It creates JSON string from the name-and-value pair of form fields, and can perform JSON to form initialization.
 
-### Latest Release - v0.3
+### Latest Release - v0.3.2
 
 Now includes support for loading data from JSON to form, AKA "deJSONify", just like `jsonify()` extracts data from the form fields, `dejsonify()` can assign JSON data back to form fields. See usage section for more.
 
@@ -75,6 +75,7 @@ Feel free to submit any issue OR helping to fix an issue.
 * 0.2 - Option can be provided whether to create JSON string or JSON object.
 * 0.3 - Support for JSON to form initialization added via method `dejsonify`.
 * 0.3.1 - Fixes incorrect value population with `dejsonify` when input types `radio` and `checkbox` are present in form.
+* 0.3.2 - Fix improper null check in `jsonify` method.
 
 
 ## Author
